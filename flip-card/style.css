@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(70deg, blue, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.container{
+    height: 350px;
+    width: 250px;
+    perspective:700px;
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    
+}
+
+.front,.front-1, .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+.front{
+    background-image: url(./image/messi.jpg);
+    background-position: center;
+    background-size: contain;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px 5px rgb(50, 50, 50, 0.25);
+}
+
+.front-1{
+    background-image: url(./image/ronaldo\ \(2\).jpg);
+    background-position: center;
+    background-size: contain;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px 5px rgb(50, 50, 50, 0.25);
+}
+
+.back{
+    border-radius: 1rem;
+    box-shadow: 0 0 2px 5px rgb(50, 50, 50, 0.25);  
+    color: teal;
+    background-color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cris-h1{
+    font-size: 25px;
+}
